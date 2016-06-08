@@ -1,7 +1,8 @@
 # yard
-This repo demonsrates an implementation of shaunting yard algorithm with the concepts of transpilers in mind. 
-to use this project please clone it and run the following:
+Shaunting yard algorithm with the concepts of transpilers in mind. 
+
 ```BASH
+git clone https://github.com/qballer/yard.git
 npm install
 npm run test 
 
