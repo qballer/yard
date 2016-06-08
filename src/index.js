@@ -5,7 +5,7 @@ function isTokenOperator(char) {
 	return !!operators[char];
 }
 // input: mathimatical expression infix order
-//outputs: array of tokens in infix order
+// outputs: array of tokens in infix order
 function tokenize(expression) {
 	var firstPass = ''
 	_(expression).forEach(function (char, index) {
@@ -26,7 +26,7 @@ function tokenize(expression) {
 }
 
 // input: mathimatical expression infix order
-//outputs: array of tokens in postfix order
+// outputs: array of tokens in postfix order
 function parse(expression) {
 	var tokens = tokenize(expression);
 
@@ -79,8 +79,8 @@ function doOperation(number1, number2, token) {
 	return operators[token] ? operators[token].operation(number1, number2) : NaN;
 }
 
-//input mathimatical expression.
-//output the result of the expression.
+//input:  mathimatical expression.
+//output: evaluation.
 
 function resolve(expression) {
 	var postfix = parse(expression);
