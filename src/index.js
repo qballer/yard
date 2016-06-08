@@ -29,7 +29,6 @@ function tokenize(expression) {
 //outputs: array of tokens in postfix order
 function parse(expression) {
 	var tokens = tokenize(expression);
-	// console.log('length is: ' + tokens.length);
 
 	var output = [];
 	var stack = [];
@@ -82,13 +81,11 @@ function doOperation(number1, number2, token) {
 
 function resolve(expression) {
 	var postfix = parse(expression);
-	console.log('the parse result ' + postfix);
 	var stack = [];
 	postfix.forEach(function(token){
 		if(!isNaN(token)) {
 			stack.push(token);
 		} else if(isTokenOperator(token)) {
-			// console.log('stack is: ' + stack);
 			var number1 = parseFloat(stack.pop());
 			var number2 = parseFloat(stack.pop());
 			stack.push(doOperation(number1, number2, token));
@@ -98,5 +95,4 @@ function resolve(expression) {
 	});
 	return stack.pop();
 }
-// console.log(resolve(process.argv[2]));
 module.exports = resolve;
