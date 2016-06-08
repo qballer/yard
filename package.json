@@ -4,7 +4,7 @@
   "description": "yard implementation in javascript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter list"
   },
   "keywords": [
     "mathimatical",
@@ -13,7 +13,7 @@
   "author": "Doron Tsur",
   "license": "MIT",
   "dependencies": {
-    "lodash": "4.13.1",
+    "lodash": "4.13.1"
   },
   "devDependencies": {
     "mocha": "^2.5.3",
