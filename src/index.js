@@ -40,11 +40,9 @@ function parse(expression) {
 			output.push(token)
 		}
 		else if(isTokenOperator(token)) {
-			if (stack.length === 0) {
-				stack.push(token);
-			}
 			//opening brace can always be pushed.
-			else if (token === '(') {
+			// empty stack as well.
+			if (stack.length === 0 || token === '(') {
 				stack.push(token);
 			}
 			// unwine the stack till opening brace and get rid of it.
@@ -70,7 +68,7 @@ function parse(expression) {
 			}
 		}
 	});
-	// if something is left on the stack lets just write dump
+	// if something is left on the stack lets just dump
 	// it to the output.
 	while(stack.length > 0){
 		output.push(stack.pop());
