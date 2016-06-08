@@ -67,8 +67,8 @@ function parse(expression) {
 			}
 		}
 	});
-	// if something is left on the stack lets just dump
-	// it to the output.
+
+	// if something is left on the stack lets just dump it to the output.
 	while(stack.length > 0){
 		output.push(stack.pop());
 	}
