@@ -79,6 +79,9 @@ function doOperation(number1, number2, token) {
 	return operators[token] ? operators[token].operation(number1, number2) : NaN;
 }
 
+//input mathimatical expression.
+//output the result of the expression.
+
 function resolve(expression) {
 	var postfix = parse(expression);
 	var stack = [];
