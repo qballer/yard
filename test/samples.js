@@ -10,5 +10,9 @@ module.exports = [
 	{
 		exp:"100^3 * 5 / 10 - 3",
 		result:"499997"
+	},
+	{
+		exp:"6 / 2 * (2 + 1)",
+		result:"9"
 	}
 ];
