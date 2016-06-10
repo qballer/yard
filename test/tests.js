@@ -5,7 +5,7 @@ var resolver  = require('../src');
 describe('should support the expression', function(){
 	samples.forEach(function(element) {
 		it(element.exp, function() {
-			expect((resolver(element.exp)).toString()).to.equal(element.result);
+			expect(resolver(element.exp)).to.equal(parseFloat(element.result));
 		});
 	});
 
